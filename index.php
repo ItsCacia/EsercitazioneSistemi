@@ -13,45 +13,35 @@
     
         <table id="product-table">
             <?php
-                // Connect to your MySQL database using mysqli
-                $servername = "localhost";
-                $username = "guest";
-                $password = "guest";
-                $database = "Esercitazione";
-    
-                $conn = mysqli_connect($servername, $username, $password, $database);
-                if (!$conn) {
-                  die("Connection failed: " . mysqli_connect_error());
-                }
-            
-                // Fetch products from your MySQL database
-                $sql = "SELECT * FROM prodotto";
-                $result = mysqli_query($conn, $sql);
-            
-                // Loop through the products and display them in divs
+                // Creo la connessione col database
+                $mysqli = new mysqli('localhost', 'guest', 'guest', 'Esercitazione');
+
+                $result = $mysqli->query("SELECT * FROM prodotto", MYSQLI_USE_RESULT);
+
                 $count = 0;
                 while ($row = mysqli_fetch_assoc($result)) {
-                  if ($count % 5 === 0) {
-                    echo "<tr>";
-                  }
-              
-                  echo "<td>";
-                  echo "<div class='product-item'>";
-                  echo "<h3>" . $row['nome'] . "</h3>";
-                  echo "<p>" . $row['descrizione'] . "</p>";
-                  echo "<p>" . $row['prezzo'] . "</p>";
-                  echo "<p>" . $row['quantita'] . "</p>";
-                  echo "</div>";
-                  echo "</td>";
-              
-                  if ($count % 5 === 4) {
-                    echo "</tr>";
-                  }
-              
-                  $count++;
+                    if ($count % 5 === 0) {
+                        echo "<tr>";
+                    }
+                  
+                    echo "<td>";
+                    echo "<div class='product-item'>";
+                    echo "<h3>" . $row['nome'] . "</h3>";
+                    echo "<p>" . $row['descrizione'] . "</p>";
+                    echo "<p>" . $row['prezzo'] . "</p>";
+                    echo "<p>" . $row['quantita'] . "</p>";
+                    echo "</div>";
+                    echo "</td>";
+                  
+                    if ($count % 5 === 4) {
+                        echo "</tr>";
+                    }
+
+                    $count++;
                 }
-            
-                mysqli_close($conn);
+
+                $result->close();
+                $mysqli->close();
             ?>
         </table>
     </div>

@@ -7,7 +7,7 @@
 <body>
 
     <header>    
-        <h2>Outlet spaziale #42</h2>
+        <h2>Outlet spaziale #42 - vista admin</h2>
         <button id="login-button" class="button" onclick="openLoginWindow()">Login</button>
     </header>
 
@@ -44,7 +44,8 @@
 
                     echo "<td>";
                     echo "<div class='product-item'>";
-                    echo "<h3>" . $row['nome'] . "</h3>";
+                    echo "<h3>" . "Id: " . $row['id_prodotto'] . "</h3>";
+                    echo "<h4>" . $row['nome'] . "</h4>";
                     echo "<img src=\"images/prodotti/" . $row['nome'] . ".png\" alt=\"" . $row['nome'] . "\">";
                     echo "<p>" . $row['descrizione'] . "</p>";
                     echo "<p>" . "Prezzo: " . $row['prezzo'] . "€" . "</p>";

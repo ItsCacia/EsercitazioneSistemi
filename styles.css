@@ -1,5 +1,7 @@
 body {
     background-color: black;
+    background-image: url("images/background.png");
+    background-attachment: fixed; 
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -26,7 +28,7 @@ header > h2 {
 #container {
     margin: 0 auto;
     padding: 20px;
-    padding-top: 10%;
+    padding-top: 7.5%;
     top: 20%;
 }
 
@@ -59,12 +61,30 @@ header > h2 {
 
 .product-item {
     width: 200px;
-    height: 350px;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Adjust vertical alignment as needed */
+    align-items: start;
     margin: 10px;
     background-color: #999;
     padding-left: 35px;
     padding-right: 35px;
     border-radius: 5%;
     border: 3px solid #777;
+}
+
+.product-item > img {
+    max-width: 80%;
+    max-height: 80px;
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.product-item > .content {
+    flex-grow: 1; /* Allow content to expand and fill remaining space */
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    background-image: url('images/button.png');
 }

@@ -1,31 +1,70 @@
-.container {
-    max-width: 800px;
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background-image: url('images/header.png');
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+}
+
+header > h2 {
+    color: #fff;
+}
+
+#container {
     margin: 0 auto;
     padding: 20px;
+    padding-top: 10%;
+    top: 20%;
+}
+
+#search-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
 }
 
 #search-bar {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    width: 300px;
+    display: flex;
+    width: 100%;
+}
+
+#login-button {
+    position: relative;
 }
 
 #product-table {
     margin-top: 20px;
+    display: flex;
+}
+
+#product-table > .div {
+    width: 20%;
+    height: 20%;
 }
 
 .product-item {
-    width: 150px;
-    height: 200px;
-    border: 1px solid #ccc;
+    width: 200px;
+    height: 350px;
     display: inline-block;
     margin: 10px;
-    padding: 10px;
-}
-
-#login-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    background-color: #999;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 5%;
+    border: 3px solid #777;
 }

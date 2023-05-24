@@ -24,7 +24,6 @@
 		        ini_set('display_startup_errors', 1);
 		        error_reporting(E_ALL);
 
-		        // Creo la connessione col database
                 $mysqli = new mysqli('localhost', 'guest', 'guest');
 
 		        $mysqli->select_db("Esercitazione");

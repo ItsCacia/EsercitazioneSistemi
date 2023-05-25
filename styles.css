@@ -47,10 +47,6 @@ header > h2 {
     flex: 10%;
 }
 
-#login-button {
-    position: relative;
-}
-
 #product-table {
     margin-top: 20px;
     display: flex;

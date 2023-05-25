@@ -37,7 +37,6 @@ header > h2 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-top: 25px;
 }
 
 #search-bar {
@@ -72,7 +71,7 @@ header > h2 {
     background-color: #999;
     padding-left: 35px;
     padding-right: 35px;
-    border-radius: 5%;
+    border-radius: 1rem;
     border: 3px solid #777;
 }
 
@@ -86,33 +85,4 @@ header > h2 {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-}
-
-.button {
-    background-image: url('images/button.png');
-}
-
-#login-div {
-    width: 12.5%;
-    height: 40%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #eee;
-    padding-left: 35px;
-    padding-right: 35px;
-    border-radius: 5%;
-    border: 3px solid #777;
-    position: fixed;
-    display: none;
-    align-content: center;
-    justify-content: center;
-    z-index: 9999;
-    flex-direction: column;
-}
-
-#login-div > input {
-    width: 80%;
-    height: 10%;
-    justify-content: space-between;
 }
